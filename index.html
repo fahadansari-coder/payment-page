@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pay FAHAD</title>
+<style>
+  body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #0f2027, #2c5364);
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+  }
+  .box {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+  }
+  h1 { margin-bottom: 10px; }
+  button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #00c853;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #00e676;
+  }
+</style>
+</head>
+
+<body>
+  <div class="box">
+    <h1>FAHAD WAQUAR AHMAD ANSARI</h1>
+    <p>Scan & Pay securely</p>
+
+    <button onclick="payNow()">Pay Now</button>
+  </div>
+
+<script>
+function payNow() {
+  window.location.href = "upi://pay?pa=ID9607423555@fam&pn=FAHAD%20WAQUAR%20AHMAD%20ANSARI&cu=INR";
+}
+</script>
+
+</body>
+</html>
