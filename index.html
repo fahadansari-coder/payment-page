@@ -1,49 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pay FAHAD</title>
+
 <style>
-  body {
-    font-family: Arial;
-    background: linear-gradient(135deg, #0f2027, #2c5364);
-    color: white;
-    text-align: center;
-    padding-top: 100px;
-  }
-  .box {
-    background: rgba(255,255,255,0.1);
-    padding: 30px;
-    border-radius: 15px;
-    display: inline-block;
-  }
-  h1 { margin-bottom: 10px; }
-  button {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    background: #00c853;
-    color: white;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #00e676;
-  }
+body {
+  font-family: Arial;
+  background: #0f2027;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+button {
+  padding: 15px;
+  margin: 10px;
+  width: 80%;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.gpay { background: #4285F4; }
+.phonepe { background: #5f259f; }
+.paytm { background: #00baf2; }
+.qr { background: #00c853; }
 </style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>FAHAD WAQUAR AHMAD ANSARI</h1>
-    <p>Scan & Pay securely</p>
 
-    <button onclick="payNow()">Pay Now</button>
-  </div>
+<h2>FAHAD WAQUAR AHMAD ANSARI</h2>
+<p>Select payment method</p>
+
+<button class="gpay" onclick="pay()">Pay with UPI App</button>
+
+<p>OR</p>
+
+<button class="qr" onclick="showQR()">Scan QR Instead</button>
 
 <script>
-function payNow() {
+function pay() {
   window.location.href = "upi://pay?pa=ID9607423555@fam&pn=FAHAD%20WAQUAR%20AHMAD%20ANSARI&cu=INR";
+}
+
+function showQR() {
+  alert("Scan the QR code if payment app does not open.");
 }
 </script>
 
